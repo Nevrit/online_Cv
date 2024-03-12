@@ -1,0 +1,100 @@
+{% extends "panel/base.html" %}
+{% load static %}
+{% load bootstrap_icons %}
+{% block content %}
+<main>
+    <section class="my-5">
+        <div class="container">
+            <div class="row gy-4 align-items-center gy-md-0">
+                <div class="col-12 col-md-6">
+                    <h1 class="fw-bold fs-3">
+                        Je suis Nevrit Ahua Dévéloppeur Web Backend | Développeur Odoo
+                    </h1>
+                    <h2 class="fw-light fs-3">
+                        Bienvenu dans mon univers créatif
+
+                    </h2>
+                    <button type="button" class="btn btn-primary mt-5">Mon expertise web</button>
+
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <img src="{% static 'images/nev.jpg' %}" alt="Nev Ahua" width="100%" class="rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-0">Mon expertise</h2>
+            <h3 class="fw-light fs-5">Développement web et design</h3>
+            <!-- Developpement -->
+            <div class="row gy-4 mt-4">
+                <div class="col-12 col-md-7">
+                    <div class="bg-secondary h-100 w-100 py-5">
+                    </div>
+                </div>
+                <div class="col-12 offset-md-1 col-md-4">
+                    <img src="{% static 'images/code.jpg' %}" alt="écran montrant du code php" width="100%">
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="row gy-4 mt-4">
+                <div class="col-12 col-md-4">
+                    <img src="{% static 'images/design.jpg' %}" alt="écran montrant des designs" width="100%">
+                </div>
+                <div class="col-12 offset-md-1 col-md-7">
+                    <div class="bg-secondary h-100 w-100 py-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="py-5">
+        <div class="container">
+          <h2>Mon portfolio</h2>
+          <h3>Projets perso et pro</h3>
+          <div class="row gy-4 mt-4">
+            <div class="col-3">
+              <div class="bg-secondary h-100 w-100 py-5">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="bg-secondary h-100 w-100 py-5">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="bg-secondary h-100 w-100 py-5">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="bg-secondary h-100 w-100 py-5">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Email me -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h2>Un projet de création web ?</h2>
+          <h3>Allons en discuter autour d'un café</h3>
+  
+          <div class="row gy-4 mt-5">
+            <div class="col-12 col-md-5">
+              <img src="{% static 'images/grab-a-coffee.jpg' %}" alt="Image d'une tasse de café" width="100%">
+            </div>
+            <div class="col-12 offset-md-1 col-md-6">
+              <div class="bg-secondary h-100 w-100 py-5">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>
+{% endblock content %}
