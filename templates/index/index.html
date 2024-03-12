@@ -3,98 +3,292 @@
 {% load bootstrap_icons %}
 {% block content %}
 <main>
-    <section class="my-5">
-        <div class="container">
-            <div class="row gy-4 align-items-center gy-md-0">
-                <div class="col-12 col-md-6">
-                    <h1 class="fw-bold fs-3">
-                        Je suis Nevrit Ahua Dévéloppeur Web Backend | Développeur Odoo
-                    </h1>
-                    <h2 class="fw-light fs-3">
-                        Bienvenu dans mon univers créatif
+  <section class="my-5">
+    <div class="container">
+      <div class="row gy-4 align-items-center gy-md-0">
+        <div class="col-12 col-md-6">
+          <h1 class="fw-bold fs-3">
+            Je suis Nevrit Ahua Dévéloppeur Web Backend | Développeur Odoo
+          </h1>
+          <h2 class="fw-light fs-3">
+            Bienvenu dans mon univers créatif
 
-                    </h2>
-                    <button type="button" class="btn btn-primary mt-5">Mon expertise web</button>
+          </h2>
+          <button type="button" class="btn btn-primary mt-5">Mon expertise web</button>
 
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <img src="{% static 'images/nev.jpg' %}" alt="Nev Ahua" width="100%" class="rounded-3 shadow">
-                </div>
-            </div>
         </div>
-    </section>
 
-    <section id="expertise" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="mb-0">Mon expertise</h2>
-            <h3 class="fw-light fs-5">Développement web et design</h3>
-            <!-- Developpement -->
-            <div class="row gy-4 mt-4">
-                <div class="col-12 col-md-7">
-                    <div class="bg-secondary h-100 w-100 py-5">
-                    </div>
-                </div>
-                <div class="col-12 offset-md-1 col-md-4">
-                    <img src="{% static 'images/code.jpg' %}" alt="écran montrant du code php" width="100%">
-                </div>
-            </div>
-
-            <!-- Design -->
-            <div class="row gy-4 mt-4">
-                <div class="col-12 col-md-4">
-                    <img src="{% static 'images/design.jpg' %}" alt="écran montrant des designs" width="100%">
-                </div>
-                <div class="col-12 offset-md-1 col-md-7">
-                    <div class="bg-secondary h-100 w-100 py-5">
-                    </div>
-                </div>
-            </div>
+        <div class="col-12 col-md-6">
+          <img src="{% static 'images/nev.jpg' %}" alt="Nev Ahua" width="100%" class="rounded-3 shadow">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Portfolio -->
-    <section class="py-5">
-        <div class="container">
-          <h2>Mon portfolio</h2>
-          <h3>Projets perso et pro</h3>
-          <div class="row gy-4 mt-4">
-            <div class="col-3">
-              <div class="bg-secondary h-100 w-100 py-5">
+  <!-- Expertise section -->
+  <section id="expertise" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-0">Mon expertise</h2>
+      <h3 class="fw-light fs-5">Développement web et design</h3>
+      <!-- Developpement -->
+      <div class="row gy-4 mt-4">
+        <div class="col-12 col-md-7 ">
+          <div class="bg-white p-3">
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-html5 fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    HTML5
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="bg-secondary h-100 w-100 py-5">
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-css3 fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    CSS 3
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="bg-secondary h-100 w-100 py-5">
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-python fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    Python
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="bg-secondary h-100 w-100 py-5">
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-js fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    JS
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-php fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    PHP
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-google fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    Dart
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 offset-md-1 col-md-4">
+          <img src="{% static 'images/code.jpg' %}" alt="écran montrant du code php" width="100%">
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="row gy-4 mt-4">
+        <div class="col-12 col-md-4">
+          <img src="{% static 'images/design.jpg' %}" alt="écran montrant des designs" width="100%">
+        </div>
+        <div class="col-12 offset-md-1 col-md-7">
+          <div class="bg-white p-3">
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-html5 fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    HTML5
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-css3 fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    CSS 3
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-python fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    Python
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="85" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-js fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    JS
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-php fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    PHP
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-xl-2">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-brands fa-google fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-8">
+                    Dart
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- Email me -->
-      <section class="py-5 bg-light">
-        <div class="container">
-          <h2>Un projet de création web ?</h2>
-          <h3>Allons en discuter autour d'un café</h3>
-  
-          <div class="row gy-4 mt-5">
-            <div class="col-12 col-md-5">
-              <img src="{% static 'images/grab-a-coffee.jpg' %}" alt="Image d'une tasse de café" width="100%">
-            </div>
-            <div class="col-12 offset-md-1 col-md-6">
-              <div class="bg-secondary h-100 w-100 py-5">
-              </div>
-            </div>
+  <!-- Portfolio -->
+  <section class="py-5">
+    <div class="container">
+      <h2>Mon portfolio</h2>
+      <h3>Projets perso et pro</h3>
+      <div class="row gy-4 mt-4">
+        <div class="col-3">
+          <div class="bg-secondary h-100 w-100 py-5">
           </div>
         </div>
-      </section>
+        <div class="col-3">
+          <div class="bg-secondary h-100 w-100 py-5">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="bg-secondary h-100 w-100 py-5">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="bg-secondary h-100 w-100 py-5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email me -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2>Un projet de création web ?</h2>
+      <h3>Allons en discuter autour d'un café</h3>
+
+      <div class="row gy-4 mt-5">
+        <div class="col-12 col-md-5">
+          <img src="{% static 'images/grab-a-coffee.jpg' %}" alt="Image d'une tasse de café" width="100%">
+        </div>
+        <div class="col-12 offset-md-1 col-md-6">
+          <div class="bg-secondary h-100 w-100 py-5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 {% endblock content %}
