@@ -391,47 +391,40 @@
   </section>
 
 
-  <!-- Email me -->
-  <section class="py-5 bg-light">
+  <section id="contact" class="py-5 bg-light">
     <div class="container">
-      <h2>Un projet de création web ?</h2>
-      <h3>Allons en discuter autour d'un café</h3>
+      <h2 class="mb-0">Un projet de création web ?</h2>
+      <h3 class="fw-light fs-5">Allons en discuter autour d'un café</h3>
 
-      <div class="row gy-4 mt-5">
+      <div class="row gy-4 mt-4">
         <div class="col-12 col-md-5">
-          <img src="{% static 'images/grab-a-coffee.jpg' %}" alt="Image d'une tasse de café" width="100%">
+          <img src="{% static '/images/grab-a-coffee.jpg' %}" alt="Image d'une tasse de café" width="100%">
         </div>
         <div class="col-12 offset-md-1 col-md-6">
-          <form>
-            <div class="row">
-              <div class="col">
-                <div class="mb-3">
-                  <label for="text" class="form-label">Prénom</label>
-                  <input class="form-control" type="text" placeholder="Put your name here">
-                </div>
-              </div>
-              <div class="col">
-                <div class="mb-3">
-                  <label for="text" class="form-label">Nom</label>
-                  <input class="form-control" type="text" placeholder="Text here">
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
+
+          <!-- Formulaire -->
+          <form class="row">
+            <div class="col-6 my-2">
+              <label for="firstname" class="form-label">Prénom</label>
+              <input name="firstname" type="text" class="form-control" id="firstname">
             </div>
-            <div class="row">
-              <div class="col">
-                <a type="submit" class="btn btn-primary mb-3">Confirm identity</a>
-              </div>
+            <div class="col-6 my-2">
+              <label for="name" class="form-label">Nom</label>
+              <input name="name" type="text" class="form-control" id="name">
+            </div>
+            <div class="col-12 my-2">
+              <label for="email" class="form-label">Email address</label>
+              <input name="email" type="email" class="form-control" id="email">
+            </div>
+            <div class="col-12 my-2">
+              <label for="message" class="form-label">Message</label>
+              <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <div class="col-12 my-2">
+              <button type="submit" class="btn btn-primary w-100">Envoyer</button>
             </div>
           </form>
+
         </div>
       </div>
     </div>
