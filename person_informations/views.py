@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import Information
 
 # Create your views here.
 def index(request):
-    return render(request, 'index/index.html')
+    person_informations = Information.objects.all()
+    context = {"person_informations" : person_informations}
+    return render(request, 'index/index.html', context)

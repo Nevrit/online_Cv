@@ -19,6 +19,7 @@ class Information(models.Model):
     
     name = models.CharField(max_length = 50, verbose_name="Nom")
     last_name = models.CharField(max_length=150, verbose_name="Prénom")
+    image = models.ImageField(upload_to='pics_on_myself/', height_field=None, width_field=None, max_length=100,)
     birthdate = models.DateField(verbose_name="Date d'anniversaire")
     email = models.EmailField(verbose_name="Email")
     phone_number = PhoneNumberField(blank=False, verbose_name="Numéro de téléphone") 

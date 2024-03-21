@@ -8,18 +8,21 @@
       <div class="row gy-4 align-items-center gy-md-0">
         <div class="col-12 col-md-6">
           <h1 class="fw-bold fs-3">
-            Je suis Nevrit Ahua Dévéloppeur Web Backend | Développeur Odoo
+            {% for information in person_informations %}
+              Je suis {{information.last_name}} {{information.name}}, {{information.position}}
+            {% endfor %}
           </h1>
           <h2 class="fw-light fs-3">
             Bienvenu dans mon univers créatif
-
           </h2>
           <button type="button" class="btn btn-primary mt-5">Mon expertise web</button>
-
         </div>
 
         <div class="col-12 col-md-6">
-          <img src="{% static 'images/nev.jpg' %}" alt="Nev Ahua" width="100%" class="rounded-3 shadow">
+          {% for information in person_informations %}
+          <img src="{{ information.image.url }}" alt="{{information.last_name}} {{information.name}}" width="100%" class="rounded-3 shadow">
+          {% endfor %}
+          
         </div>
       </div>
     </div>

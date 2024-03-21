@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'django_bootstrap_icons',
     'person_informations',
     "phonenumber_field",
-    "fontawesomefree",
-    
+    "fontawesomefree",    
 ]
 
 MIDDLEWARE = [
