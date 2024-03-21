@@ -35,5 +35,32 @@ class Information(models.Model):
     company = models.CharField(max_length=100, verbose_name="Nom de la société")
     hiring_date = models.DateField(verbose_name="Date d'embauche")
     
+    
+    class Meta:
+        verbose_name = 'Information Personnelles'
+        
     def __str__(self):
         return self.name
+    
+# Langague do you know  
+class ExpertiseLanguage(models.Model):
+    
+    name = models.CharField(max_length=30, verbose_name="Nom du langage")
+    icon = models.CharField(max_length=50, verbose_name="Classe de l'icône FontAwesome")
+    percentage_value = models.IntegerField(default=0, choices=((i,i) for i in range(0, 101)), verbose_name="Niveau de connaisance")
+
+    
+    class Meta:
+        verbose_name = 'Langage Informatique'
+        verbose_name_plural = 'Langage Informatique'
+        
+    def __str__(self):
+        return self.name
+
+# Framework do you know  
+class ExpertiseFramework(models.Model):
+    
+    name = models.CharField(max_length=30, verbose_name="Nom du langage")
+    icon = models.CharField(max_length=50, verbose_name="Classe de l'icône FontAwesome")
+    percentage_value = models.IntegerField(default=0, choices=((i,i) for i in range(0, 101)), verbose_name="Niveau de connaisance")
+    

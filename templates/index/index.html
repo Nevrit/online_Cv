@@ -9,7 +9,7 @@
         <div class="col-12 col-md-6">
           <h1 class="fw-bold fs-3">
             {% for information in person_informations %}
-              Je suis {{information.last_name}} {{information.name}}, {{information.position}}
+            Je suis {{information.last_name}} {{information.name}}, {{information.position}}
             {% endfor %}
           </h1>
           <h2 class="fw-light fs-3">
@@ -20,9 +20,10 @@
 
         <div class="col-12 col-md-6">
           {% for information in person_informations %}
-          <img src="{{ information.image.url }}" alt="{{information.last_name}} {{information.name}}" width="100%" class="rounded-3 shadow">
+          <img src="{{ information.image.url }}" alt="{{information.last_name}} {{information.name}}" width="100%"
+            class="rounded-3 shadow">
           {% endfor %}
-          
+
         </div>
       </div>
     </div>
@@ -38,134 +39,25 @@
         <div class="col-12 col-md-7">
 
           <!-- Progress bar -->
+          {% for language in languages %}
           <div class="mb-3 p-3 bg-white">
             <div class="row align-items-center">
               <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
                 <div class="d-flex align-items-center">
-                  <i class="fab fa-html5 fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">HTML5</p>
+                  <i class="{{ language.icon }} fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-0">{{ language.name }}</p>
                 </div>
               </div>
               <div class="col">
                 <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
+                  <div class="progress-bar" style="width: {{ language.percentage_value }}%;" role="progressbar"
+                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-x fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">XML</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-css3-alt fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">CSS3</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-python fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">Python</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-js fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">JS</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-google fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">Dart</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-php fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">PHP</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
+          {% endfor %}
         </div>
         <div class="col-12 offset-md-1 col-md-4">
           <img src="{% static '/images/code.jpg' %}" alt="écran montrant du code php" width="100%">
@@ -180,113 +72,25 @@
         <div class="col-12 order-first offset-md-1 col-md-7 order-md-last">
 
           <!-- Progress bar -->
+          {% for framework in framework %}
           <div class="mb-3 p-3 bg-white">
             <div class="row align-items-center">
               <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
                 <div class="d-flex align-items-center">
-                  <i class="fab fa-python fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">Django</p>
+                  <i class="{{ framework.icon }} fa-2x me-3 text-primary"></i>
+                  <p class="fw-bold m-0">{{ framework.name }}</p>
                 </div>
               </div>
               <div class="col">
                 <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
+                  <div class="progress-bar" style="width: {{ framework.percentage_value }}%;" role="progressbar"
+                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-google fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">Flutter</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fa-regular fa-pepper-hot fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">Flask</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-o fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">Odoo</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fa-brands fa-bootstrap fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">BS5</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3 p-3 bg-white">
-            <div class="row align-items-center">
-              <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-python fa-2x me-3 text-primary"></i>
-                  <p class="fw-bold m-0">PyQt5</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress">
-                  <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                    aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
 
         </div>
 
