@@ -90,12 +90,11 @@
               </div>
             </div>
           </div>
+          
           {% endfor %}
 
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -164,15 +163,14 @@
     <div class="container">
       <h2 class="mb-0">Un projet de création web ?</h2>
       <h3 class="fw-light fs-5">Allons en discuter autour d'un café</h3>
-
       <div class="row gy-4 mt-4">
         <div class="col-12 col-md-5">
           <img src="{% static '/images/grab-a-coffee.jpg' %}" alt="Image d'une tasse de café" width="100%">
         </div>
         <div class="col-12 offset-md-1 col-md-6">
-
           <!-- Formulaire -->
-          <form class="row">
+          <form class="row" method="post" novalidate>
+            {% csrf_token %}
             <div class="col-6 my-2">
               <label for="firstname" class="form-label">Prénom</label>
               <input name="firstname" type="text" class="form-control" id="firstname">
@@ -186,6 +184,10 @@
               <input name="email" type="email" class="form-control" id="email">
             </div>
             <div class="col-12 my-2">
+              <label for="subject" class="form-label">Objet</label>
+              <input name="subject" type="text" class="form-control" id="subject">
+            </div>
+            <div class="col-12 my-2">
               <label for="message" class="form-label">Message</label>
               <textarea name="message" class="form-control" id="message" rows="3"></textarea>
             </div>
@@ -193,7 +195,6 @@
               <button type="submit" class="btn btn-primary w-100">Envoyer</button>
             </div>
           </form>
-
         </div>
       </div>
     </div>

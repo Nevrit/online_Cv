@@ -103,3 +103,18 @@ class CarouselPortfolioImage(models.Model):
 
     class Meta:
         verbose_name = 'Carousel image'
+        
+class Form(models.Model):
+    first_name = models.CharField(blank=False, max_length=100, verbose_name='Prénom',)
+    name = models.CharField(blank=False, max_length=100, verbose_name='Nom',)
+    email = models.EmailField(blank=False, help_text='Veuillez entrer une adresse mail valide s\'il vous plaît', verbose_name='Email',)
+    subject = models.CharField(blank=False, verbose_name='Objet', max_length=255)
+    message = models.TextField(blank=True, max_length=5000, verbose_name='Message',)
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Demande des client'

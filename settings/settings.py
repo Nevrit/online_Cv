@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-wt0i2w-+!vgbwx0l82ek-7vhqakcm8e+b&v5beioim&$19xh@c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.151.186', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -152,3 +152,13 @@ DJANGO_ICONS = {
         "edit": {"name": "far fa-pencil"},
     },
 }
+
+
+# EMAIL CONFIGURATION
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'nevritahua.na@gmail.com'
+EMAIL_HOST_PASSWORD = 'jeax vuen borv cozj'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
