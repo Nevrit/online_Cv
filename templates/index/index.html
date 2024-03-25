@@ -169,7 +169,7 @@
         </div>
         <div class="col-12 offset-md-1 col-md-6">
           <!-- Formulaire -->
-          <form class="row" method="post" novalidate>
+          <form class="row" method="post" action="{% url 'send_mail' %}" novalidate>
             {% csrf_token %}
             <div class="col-6 my-2">
               <label for="firstname" class="form-label">Prénom</label>

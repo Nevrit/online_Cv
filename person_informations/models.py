@@ -104,8 +104,8 @@ class CarouselPortfolioImage(models.Model):
     class Meta:
         verbose_name = 'Carousel image'
         
-class Form(models.Model):
-    first_name = models.CharField(blank=False, max_length=100, verbose_name='Prénom',)
+class Contact(models.Model):
+    firstname = models.CharField(blank=False, max_length=100, verbose_name='Prénom',)
     name = models.CharField(blank=False, max_length=100, verbose_name='Nom',)
     email = models.EmailField(blank=False, help_text='Veuillez entrer une adresse mail valide s\'il vous plaît', verbose_name='Email',)
     subject = models.CharField(blank=False, verbose_name='Objet', max_length=255)
