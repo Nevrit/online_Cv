@@ -7,14 +7,18 @@
     <div class="container">
       <div class="row gy-4 align-items-center gy-md-0">
         <div class="col-12 col-md-6">
+          {% for information in person_informations %}
           <h1 class="fw-bold fs-3">
-            {% for information in person_informations %}
             Je suis {{information.last_name}} {{information.name}}, {{information.position}}
-            {% endfor %}
           </h1>
-          <h2 class="fw-light fs-3">
-            Bienvenu dans mon univers créatif
-          </h2>
+          <p>
+            {{ information.description }}
+          </p>
+          <p class="fw-bold">
+            Email : {{ information.email }} <br />
+            Phone : {{ information.phone_number }}
+          </p>
+          {% endfor %}
           <button type="button" class="btn btn-primary mt-5">Mon expertise web</button>
         </div>
 
@@ -64,7 +68,7 @@
         </div>
       </div>
 
-      <!-- Design -->
+      <!-- Framework -->
       <div class="row gy-4 mt-4">
         <div class="col-12 col-md-4">
           <img src="{% static '/images/design.jpg' %}" alt="écran montrant des designs" width="100%">
@@ -90,16 +94,44 @@
               </div>
             </div>
           </div>
-          
           {% endfor %}
-
         </div>
       </div>
     </div>
   </section>
 
+
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="fw-bold text-center">
+        My Resume
+      </h2>
+      <p class="text-center fw-light">
+        Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. <br /> Odit ab aliquam dolor eius.
+      </p>
+      <div class="row gy-4 mt-4">
+        {% for resume in resume %}
+        <div class="col-12 col-md-5 offset-md-1">
+          <h5 class='fw-bold'>
+            {{ resume.title}}
+          </h5>
+          <h6 class="fw-light fs-10 mt-2 mb-2">
+              {{ resume.post_date_start}} - {{ resume.post_date_end}}
+          </h6>
+          <h6 class="fw-bold">
+            {{ resume.type_of_service}}
+          </h6>
+          <p class="fw-light">
+            {{ resume.post_description }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <!-- Portfolio -->
-  <section class="py-5">
+  <section class="py-5 bg-light">
     <div class="container">
       <h2 class="fw-bold mb-0">
         Mon portfolio
@@ -159,7 +191,7 @@
   </section>
 
 
-  <section id="contact" class="py-5 bg-light">
+  <section id="contact" class="py-5 bg-white">
     <div class="container">
       <h2 class="mb-0">Un projet de création web ?</h2>
       <h3 class="fw-light fs-5">Allons en discuter autour d'un café</h3>

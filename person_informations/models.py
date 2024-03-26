@@ -19,6 +19,7 @@ class Information(models.Model):
     
     name = models.CharField(max_length = 50, verbose_name="Nom")
     last_name = models.CharField(max_length=150, verbose_name="Prénom")
+    description = models.TextField(max_length=1000, verbose_name="A propos de moi", default="", blank=True)
     image = models.ImageField(upload_to='pics_on_myself/', height_field=None, width_field=None, max_length=100,)
     birthdate = models.DateField(verbose_name="Date d'anniversaire")
     email = models.EmailField(verbose_name="Email")
@@ -42,6 +43,23 @@ class Information(models.Model):
         
     def __str__(self):
         return self.name
+    
+class Resume(models.Model):
+    information = models.ForeignKey(Information, on_delete=models.CASCADE, null=True, blank=True)
+    title = models.CharField(max_length=100, blank=True, verbose_name="Titre de la section")
+    post_date_start = models.DateField(verbose_name="Date d'embauche")
+    post_date_end = models.DateField(verbose_name="Date de fin")
+    type_of_service = models.CharField(verbose_name="Type de service", help_text="Dire si vous étiez en freelance, consultant etc...", max_length=50)
+    post_description = models.TextField(verbose_name="Description du poste", help_text="Dire en quoi consistait le travail", max_length=2000)
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Expérience'
+        verbose_name_plural = "Expériences"
+        
+    def __str__(self):
+        return self.title
     
 # Langague do you know  
 class ExpertiseLanguage(models.Model):

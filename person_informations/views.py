@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
-from .models import Information, ExpertiseLanguage, ExpertiseFramework, Portfolio, Contact
+from .models import Information, ExpertiseLanguage, ExpertiseFramework, Portfolio, Contact, Resume
 from django.core.mail import send_mail, BadHeaderError
 from settings import settings
 from .forms import MessageForm
@@ -10,7 +10,8 @@ def index(request):
     languages = ExpertiseLanguage.objects.all()
     framework = ExpertiseFramework.objects.all()
     portfolios = Portfolio.objects.all()
-    context = {"person_informations" : person_informations, "languages" : languages, "framework":framework, "portfolios":portfolios}
+    resume = Resume.objects.all()
+    context = {"person_informations" : person_informations, "languages" : languages, "framework":framework, "portfolios":portfolios, "resume":resume}
     return render(request, 'index/index.html', context)
 
 

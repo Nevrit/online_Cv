@@ -1,8 +1,16 @@
 from django.contrib import admin
-from .models import Information, ExpertiseLanguage, ExpertiseFramework, Portfolio, CarouselPortfolioImage, Contact
+from .models import Information, ExpertiseLanguage, ExpertiseFramework, Portfolio, CarouselPortfolioImage, Contact, Resume
 
+
+class ResumeInline(admin.TabularInline):
+    model = Resume
+    readonly_fields = ('id',)
+    extra = 1
+    show_change_link = True
+    
 class PersonnalInfoAdmin(admin.ModelAdmin):
     list_display = ["name", "last_name", "email", "phone_number", "position", "create_at", "update_at"]
+    inlines = [ResumeInline]
     
 class ExpertiseLanguageAdmin(admin.ModelAdmin):
     list_display = ["name", "percentage_value", "create_at", "update_at"]
