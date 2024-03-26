@@ -132,7 +132,7 @@
   </section>
 
   <!-- Services -->
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-white">
     <div class="container">
       <h2 class="fw-bold text-center">
         Mes expériences
@@ -142,20 +142,25 @@
         aliquam dolor eius.
       </p>
       <div class="row gy-4 mt-4">
-        <div class="col-12 col-md-5 col-lg-3 offset-md-1 shadow p-3 mb-5 bg-white rounded">
+        {% for service in services %}
+        <div class="col-12 col-md-5 col-lg-3 offset-md-1 shadow p-3 mb-5 bg-light rounded">
           <div class="row">
             <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-python fa-2x me-3 text-primary"></i>
-                </div>
+              <div class="d-flex align-items-center">
+                <i class="{{ service.icon }} fa-2x me-3 text-primary"></i>
               </div>
+            </div>
             <div class="col offset-md-1">
+              <h4>
+                {{  service.title }}
+              </h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                {{ service.service_description}}
               </p>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -219,7 +224,6 @@
         {% endfor %}
       </div>
   </section>
-
 
   <section id="contact" class="py-5 bg-white">
     <div class="container">

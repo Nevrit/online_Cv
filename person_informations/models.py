@@ -43,7 +43,8 @@ class Information(models.Model):
         
     def __str__(self):
         return self.name
-    
+
+# Resume
 class Resume(models.Model):
     information = models.ForeignKey(Information, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=100, blank=True, verbose_name="Titre de la section")
@@ -57,6 +58,22 @@ class Resume(models.Model):
     class Meta:
         verbose_name = 'Expérience'
         verbose_name_plural = "Expériences"
+        
+    def __str__(self):
+        return self.title
+    
+# Service
+class Service(models.Model):
+    information = models.ForeignKey(Information, on_delete=models.CASCADE, null=True, blank=True)
+    icon = models.CharField(max_length=50, verbose_name="Classe de l'icône FontAwesome")
+    title = models.CharField(max_length=100, blank=True, verbose_name="Titre du service")
+    service_description = models.TextField(verbose_name="Description du poste", help_text="Donner la description du service", max_length=1000)
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Service'
+        verbose_name_plural = "Services"
         
     def __str__(self):
         return self.title

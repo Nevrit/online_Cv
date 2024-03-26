@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Information, ExpertiseLanguage, ExpertiseFramework, Portfolio, CarouselPortfolioImage, Contact, Resume
+from .models import Information, ExpertiseLanguage, ExpertiseFramework, Portfolio, CarouselPortfolioImage, Contact, Resume, Service
 
 
 class ResumeInline(admin.TabularInline):
@@ -7,10 +7,16 @@ class ResumeInline(admin.TabularInline):
     readonly_fields = ('id',)
     extra = 1
     show_change_link = True
+
+class Serviceline(admin.TabularInline):
+    model = Service
+    readonly_fields = ('id',)
+    extra = 1
+    show_change_link = True
     
 class PersonnalInfoAdmin(admin.ModelAdmin):
     list_display = ["name", "last_name", "email", "phone_number", "position", "create_at", "update_at"]
-    inlines = [ResumeInline]
+    inlines = [ResumeInline, Serviceline]
     
 class ExpertiseLanguageAdmin(admin.ModelAdmin):
     list_display = ["name", "percentage_value", "create_at", "update_at"]
