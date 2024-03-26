@@ -100,23 +100,24 @@
     </div>
   </section>
 
-
-  <section class="py-5 bg-white">
+  <!-- Resume -->
+  <section class="py-5 bg-light">
     <div class="container">
       <h2 class="fw-bold text-center">
-        My Resume
+        Mes expériences
       </h2>
       <p class="text-center fw-light">
-        Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. <br /> Odit ab aliquam dolor eius.
+        Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. <br /> Odit ab
+        aliquam dolor eius.
       </p>
       <div class="row gy-4 mt-4">
         {% for resume in resume %}
-        <div class="col-12 col-md-5 offset-md-1">
+        <div class="col-12 col-md-5 offset-md-1 shadow-sm p-3 mb-5 bg-white rounded">
           <h5 class='fw-bold'>
             {{ resume.title}}
           </h5>
           <h6 class="fw-light fs-10 mt-2 mb-2">
-              {{ resume.post_date_start}} - {{ resume.post_date_end}}
+            {{ resume.post_date_start}} - {{ resume.post_date_end}}
           </h6>
           <h6 class="fw-bold">
             {{ resume.type_of_service}}
@@ -126,6 +127,35 @@
           </p>
         </div>
         {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-center">
+        Mes expériences
+      </h2>
+      <p class="text-center fw-white">
+        Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. <br /> Odit ab
+        aliquam dolor eius.
+      </p>
+      <div class="row gy-4 mt-4">
+        <div class="col-12 col-md-5 col-lg-3 offset-md-1 shadow p-3 mb-5 bg-white rounded">
+          <div class="row">
+            <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                <div class="d-flex align-items-center">
+                  <i class="fab fa-python fa-2x me-3 text-primary"></i>
+                </div>
+              </div>
+            <div class="col offset-md-1">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -169,25 +199,25 @@
                         <img src="{{ portfolio.carousel_image.url }}" class="d-block w-100"
                           alt="{{ portfolio.carousel_image.url }}">
                       </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                      data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                      data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
   </section>
 
 
