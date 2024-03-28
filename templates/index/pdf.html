@@ -1,0 +1,10 @@
+<div class="container">
+    {% for person_information in person_informations %}
+    <h3 class="text-center">
+        {{ person_information.last_name }} {{ person_information.name }}
+    </h3>
+    <h5 class="text-center">
+        {{ person_information.position }}
+    </h5>
+    {% endfor %}
+</div>

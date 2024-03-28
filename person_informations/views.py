@@ -4,6 +4,7 @@ from .models import Information, ExpertiseLanguage, ExpertiseFramework, Portfoli
 from django.core.mail import send_mail, BadHeaderError
 from settings import settings
 from .forms import MessageForm
+from .pdf import html2pdf
 
 def index(request):
     person_informations = Information.objects.all()
@@ -38,3 +39,9 @@ def send_email(request):
         print('Rien n\'est passé')
         form = MessageForm()
     return render(request, 'index/sent_form_page.html', {'form': form})
+
+def pdf(request):
+    person_informations = Information.objects.all()
+    context = {'person_informations':person_informations}
+    pdf = html2pdf('index/pdf.html', context)
+    return HttpResponse(pdf, content_type="application/pdf")
