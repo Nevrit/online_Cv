@@ -1,5 +1,6 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from ckeditor.fields import RichTextField
 
 # Personal informations
 class Information(models.Model):
@@ -19,7 +20,7 @@ class Information(models.Model):
     
     name = models.CharField(max_length = 50, verbose_name="Nom")
     last_name = models.CharField(max_length=150, verbose_name="Prénom")
-    description = models.TextField(max_length=1000, verbose_name="A propos de moi", default="", blank=True)
+    description = RichTextField(default="", verbose_name="A propos de moi", max_length=1000)
     image = models.ImageField(upload_to='pics_on_myself/', height_field=None, width_field=None, max_length=100,)
     birthdate = models.DateField(verbose_name="Date d'anniversaire")
     email = models.EmailField(verbose_name="Email")
@@ -51,7 +52,8 @@ class Resume(models.Model):
     post_date_start = models.DateField(verbose_name="Date d'embauche")
     post_date_end = models.DateField(verbose_name="Date de fin")
     type_of_service = models.CharField(verbose_name="Type de service", help_text="Dire si vous étiez en freelance, consultant etc...", max_length=50)
-    post_description = models.TextField(verbose_name="Description du poste", help_text="Dire en quoi consistait le travail", max_length=2000)
+    post_description = RichTextField(default="", verbose_name="Description du poste", help_text="Dire en quoi consistait le travail", max_length=2000)
+
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
@@ -67,7 +69,8 @@ class Service(models.Model):
     information = models.ForeignKey(Information, on_delete=models.CASCADE, null=True, blank=True)
     icon = models.CharField(max_length=50, verbose_name="Classe de l'icône FontAwesome")
     title = models.CharField(max_length=100, blank=True, verbose_name="Titre du service")
-    service_description = models.TextField(verbose_name="Description du poste", help_text="Donner la description du service", max_length=1000)
+    service_description = RichTextField(default="", verbose_name="Description du poste", help_text="Donner la description du service", max_length=1000, blank=True)
+
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
@@ -111,7 +114,7 @@ class ExpertiseFramework(models.Model):
 class Portfolio(models.Model):
     card_image = models.ImageField(upload_to='portfolio/', height_field=None, width_field=None, max_length=100, verbose_name="Image de la card")
     card_title = models.CharField(max_length=50, verbose_name="Titre")
-    description = models.TextField(max_length=300, verbose_name="Description")
+    description = RichTextField(max_length=300, verbose_name="Description", default="", blank=True)
     href = models.CharField(max_length=50, verbose_name="Le lien", help_text="Le lien que vous mettrez ici devra être le même que le id")
     id = models.CharField(max_length=50, verbose_name="id", help_text="Le id que vous mettrez ici devra être unique", unique=True, primary_key=True)
     aria_labelledby = models.CharField(max_length=100, verbose_name="aria-labelledby", editable=False, blank=True)

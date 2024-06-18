@@ -12,7 +12,7 @@
             Je suis {{information.last_name}} {{information.name}}, {{information.position}}
           </h1>
           <p>
-            {{ information.description }}
+            {{ information.description | safe }}
           </p>
           <p class="fw-bold">
             Email : {{ information.email }} <br />
@@ -123,7 +123,7 @@
             {{ resume.type_of_service}}
           </h6>
           <p class="fw-light">
-            {{ resume.post_description }}
+            {{ resume.post_description | safe }}
           </p>
         </div>
         {% endfor %}
@@ -155,7 +155,7 @@
                 {{  service.title }}
               </h4>
               <p>
-                {{ service.service_description}}
+                {{ service.service_description | safe }}
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@
             <img src="{{ portfolio.card_image.url }}" class="card-img-top" alt="{{ portfolio.card_title }}">
             <div class="card-body">
               <h5 class="card-title">{{ portfolio.card_title }}</h5>
-              <p class="card-text">{{ portfolio.description }}</p>
+              <p class="card-text">{{ portfolio.description | safe }}</p>
               <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#{{ portfolio.href }}" role="button"
                 aria-controls="{{ portfolio.href }}">
                 Go somewhere

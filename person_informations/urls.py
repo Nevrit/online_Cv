@@ -4,5 +4,5 @@ from django.urls import path
 urlpatterns = [
     path('', views.index, name='index'),
     path('felicitation/', views.send_email, name='send_mail'),
-    path('pdf/', views.pdf, name="pdf")
+    path('pdf/', views.create_pdf, name="pdf"),
 ]
